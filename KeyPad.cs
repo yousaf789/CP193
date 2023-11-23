@@ -11,6 +11,7 @@ public class KeyPad : MonoBehaviour
 
     public GameObject InitialDesign;
     public GameObject SwitchStage;
+    public GameObject interactText;
 
     public bool inReach;
 
@@ -27,7 +28,7 @@ public class KeyPad : MonoBehaviour
         if (other.gameObject.tag == "Reach")
         {
             inReach = true;
-            // openText.SetActive(true);
+            interactText.SetActive(true);
         }
     }
 
@@ -36,7 +37,7 @@ public class KeyPad : MonoBehaviour
         if (other.gameObject.tag == "Reach")
         {
             inReach = false;
-            // openText.SetActive(false);
+            interactText.SetActive(false);
         }
     }
 
@@ -51,6 +52,7 @@ public class KeyPad : MonoBehaviour
         {
             SwitchStage.SetActive(true);
             InitialDesign.SetActive(false);
+            interactText.SetActive(false);
             Color newAmbientColor = new Color(7f / 255f, 7f / 255f, 7f / 255f);
 
 
